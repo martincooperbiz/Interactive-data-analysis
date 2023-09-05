@@ -8,7 +8,8 @@ import pandas as pd
 import time
 import matplotlib
 
-matplotlib.use('TkAgg')
+# Use 'agg' backend to avoid GUI dependencies
+matplotlib.use('agg')
 
 # Load environment variables from .env
 load_dotenv()
@@ -18,7 +19,6 @@ llm = OpenAI(api_token=API_KEY)
 pandas_ai = PandasAI(llm)
 
 #image_url = 'C:/Users/spran/OneDrive/Desktop/artificial-brain-scaled.jpg'
-
 
 image_path = 'https://mindmatters.ai/wp-content/uploads/sites/2/2021/04/artificial-brain-scaled.jpg'
 st.image(image_path, use_column_width=True)
@@ -61,4 +61,3 @@ if st.button('Generate'):
             st.warning("Please upload a file before generating analysis.")
     else:
         st.warning('Enter your prompt to execute the code')
-
