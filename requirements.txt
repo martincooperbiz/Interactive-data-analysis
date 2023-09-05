@@ -2,4 +2,4 @@ python-dotenv==0.19.1
 streamlit==1.7.0
 pandasai==1.0.0
 plotly==5.3.1
-matplotlib==3.4.3
+pandas>=1.5.3
